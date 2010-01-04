@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'test/unit'
-require 'lib/wiki_creole'
+require 'lib/wiki_creole' #test wouldn't run with previous path? (Probably my fault)
 
 class TC_WikiCreole < Test::Unit::TestCase
 
