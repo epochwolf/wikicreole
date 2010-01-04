@@ -120,7 +120,7 @@ class WikiCreole
   def self.creole_parse(s)
     return "" unless String === s
     return "" if s.empty?
-
+    s.gsub! /\r\n?/, "\n" #normalize line endings or the parser doens't work correctlys
     init
     parse(s, :top)
   end

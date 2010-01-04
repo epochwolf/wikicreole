@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'test/unit'
-require 'wiki_creole'
+require 'lib/wiki_creole'
 
 class TC_WikiCreole < Test::Unit::TestCase
 
@@ -190,7 +190,14 @@ class TC_WikiCreole < Test::Unit::TestCase
     # are the same as they were in the original test.
     run_testfile("jsp_wiki")    
   end
-
+  
+  def test_nowiki_bug
+    # This test was found on the Creole website.  I had to hand-tweak it a bit
+    # for it to make sense for our paticular settings, however, the fundamentals
+    # are the same as they were in the original test.
+    run_testfile("nowiki_bug")    
+  end
+  
   def test_nested_lists
     run_testfile("nested_lists")
   end
